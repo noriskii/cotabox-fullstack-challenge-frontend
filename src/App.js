@@ -5,7 +5,7 @@ import api from './services/api'
 import ContributorForm from './components/ContributorForm';
 import ContributorDashboard from './components/ContributorDashboard';
 
-import './App.css';
+import GlobalStyles from './styles/global'
 
 function App() {
   const [contributors, setContributors] = useState([]);
@@ -40,6 +40,7 @@ function App() {
     
   return (
     <div>
+      <GlobalStyles />
       <ContributorForm onSubmit={handleChange}/>
       <ContributorDashboard contributors={contributors} chartData={chartData}/>
     </div>
