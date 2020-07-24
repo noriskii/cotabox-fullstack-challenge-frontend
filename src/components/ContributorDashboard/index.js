@@ -8,8 +8,8 @@ function ContributorDashboard({ contributors, chartData }) {
   return (
     <main>
       <S.MainHeader>
-        <h1>DATA</h1>
-        <p>Lorem Ipsum dolor sit amet</p>
+        <h1>Contributor's Dashboard</h1>
+        <p>This Dashboard shows the participation percentage for all Project Contributors</p>
       </S.MainHeader>
       <S.Section>
         <S.Table>
