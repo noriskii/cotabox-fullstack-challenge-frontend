@@ -8,7 +8,7 @@ export const Nav = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 15vh;
+  height: 10vh;
 
   form {
     display: flex;
@@ -22,8 +22,8 @@ export const Nav = styled.nav`
     font-size: 20px;
     margin: 0.5vw;
     display: block;
-    height: 7vh;
-    width: 30vh;
+    height: 5.5vh;
+    width: 20vh;
     padding: 5px 10px;
     background: #EEE;
     background-image: none;
@@ -40,8 +40,8 @@ export const Nav = styled.nav`
     margin: 0.5vw;
     padding: 5px 10px;
     font-size: 20px;
-    height: 7vh;
-    width: 30vh;  
+    height: 5.5vh;
+    width: 20vh;
     cursor: pointer; 
   }
 
