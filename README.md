@@ -1,68 +1,86 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# COTABOX FULLSTACK CHALLENGE FRONTEND
 
-## Available Scripts
+- [COTABOX FULLSTACK CHALLENGE FRONTEND](#cotabox-fullstack-challenge-frontend)
+  - [What is this Front-End?](#what-is-this-front-end)
+  - [How this integrates with the API?](#how-this-integrates-with-the-api)
+  - [Demo](#demo)
+  - [How can i contribute (or just test it)?](#how-can-i-contribute-or-just-test-it)
+  - [What can i do here? What's the functionalities?](#what-can-i-do-here-whats-the-functionalities)
+    - [**BUTTONS**:](#buttons)
+      - [Add Contributor:](#add-contributor)
+      - [Remove Contributor:](#remove-contributor)
+      - [WIPE DATA:](#wipe-data)
+    - [**VIEWS**:](#views)
+      - [TABLE:](#table)
+      - [CHART:](#chart)
+  - [Technologies](#technologies)
 
-In the project directory, you can run:
+![Challenge Finished](https://uc631722aaff46199614a09a0846.previews.dropboxusercontent.com/p/thumb/AA3TPtloFPFs1ENFaRz9fFJo_BxlDogpfp384cPZqI_mlf_eU63CxFHrUI1SJk3HuUeZ9UigegmK828NyTnIHk2b41A5Fx5AXqs-2v45iEvtnG6Yw3yUZc68NVWQQc5Zk5nFilbukPGY-B_thla18azfQNrPBpDJ2vtzHEIwjZk5rpLhNVgJx_ilkFlUX4XowqqsJCxRzEgbhAXnD_uvt5N5q0ZuPKSTXode7UxI83seDw9SefXUpXyysYc_s1tQamvJKe-m9UWVinUtNKfbqVkzyNN1cEwBHwdDccpbM0vyr4EFRfMqNMP3X6RRAsOm2Pj84ZYsrcU7N3nq4VHI4VdYHUvWydHoC2VMWeJgde84rT6OqyYJLqcastRsmqPwR4DaCo1jClxNUTMqx9Ic8C5c/p.png?fv_content=true&size_mode=5)
 
-### `yarn start`
+## What is this Front-End?
 
-Runs the app in the development mode.<br />
+This project is part of an application called cotabox-fullstack-challenge, who is part of a practical test for a job opportunity. It works together with the api to perform actions over a MongoDB Database, using a web front-end.
+
+## How this integrates with the API?
+
+This Front-End integrates with the [API]((https://github.com/noriskii/cotabox-fullstack-challenge-api)) to retrieve and perform actions over the MongoDB database, this is an visual experience of the API, designed to be used by the clients.
+
+## Demo
+
+A demo for this project is available on Vercel
+
+https://cotabox-fullstack-challenge-frontend.vercel.app/
+
+## How can i contribute (or just test it)?
+
+If you want to contribute, feel free to Clone this repository.
+
+To start using it, yout need the API up and running on your computer/server ([Follow this repo instructions](https://github.com/noriskii/cotabox-fullstack-challenge-api#how-can-i-contribute-or-just-test-it)). After this, follow these steps in the project directory:
+
+In the `src/services/api.js` file, put your server IP and PORT of running API on `baseURL:` line, if you're not using an server and just running local, put `'http://localhost:3333'` on `baseURL:` line, and save it.
+
+Run `yarn init` or `npm init`
+
+Run `yarn start` or `npm start` to start the server (The page will reload if you make edits.). For production server, use `yarn build` instead
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## What can i do here? What's the functionalities?
 
-### `yarn test`
+With the project opened on your browser, you can use these functionalities:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **BUTTONS**:
+#### Add Contributor:
+> NOTE: You need to fill the form with the First Name, Last Name and Contribution of contributor.
 
-### `yarn build`
+With this button, you add a new participant to the table of contributors.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Remove Contributor:
+> NOTE: You need to fill the form with the First Name, Last Name of contributor.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+With this button, you remove the participant of the table of contributors.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### WIPE DATA:
+> NOTE: THIS BUTTON WILL WIPE ALL THE DATABASE DATA
 
-### `yarn eject`
+With this button, you remove all participants of the table.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### **VIEWS**:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### TABLE:
+The table will automatically update when you add or remove a participant, and shows the first name, last name, and % of participant contribution.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### CHART:
+The chart shows a pie with the portion of the contribution of each participant, updating automatically on change.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Technologies
+- ReactJS (with [Create React App](https://facebook.github.io/create-react-app/docs/getting-started));
+- styled-components;
+- Sweet Alert 2;
+- axios;
 
-## Learn More
+<br>
+<br>
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Made with :heart: ReactJS, and Styled Components by Lucas Augusto.**
